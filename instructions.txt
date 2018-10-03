@@ -34,3 +34,6 @@ win32:CONFIG(release, debug|release): LIBS += -L$$PWD/openssl-1.1.0a-x86_32/lib/
 
 INCLUDEPATH += $$PWD/openssl-1.1.0a-x86_32/include
 DEPENDPATH += $$PWD/openssl-1.1.0a-x86_32/include
+
+
+**ADD the .dll files libcrypto-1_1.dll and libssl-1_1.dll to the build folder where the .exe file is

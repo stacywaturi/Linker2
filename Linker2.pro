@@ -22,6 +22,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG += c++11
 
+#Add Existing Files
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
@@ -44,14 +45,15 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
+#ADD Path to Class files location
 INCLUDEPATH += C:\Users\Stacy\Desktop\tf_cert_mngr\tf_cert_mngr\tf_cert_mngr
 
-
+#Add Library Dependencies
 LIBS += C:\Users\Stacy\Documents\qt\Linker2\openssl-1.1.0a-x86_32\lib\libcrypto.lib
 LIBS += C:\Users\Stacy\Documents\qt\Linker2\openssl-1.1.0a-x86_32\lib\libssl.lib
 
 
-
+#LINK LIBRARIES
 win32:CONFIG(release, debug|release): LIBS += -L$$PWD/openssl-1.1.0a-x86_32/lib/ -llibcrypto
 #else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/openssl-1.1.0a-x86_32/lib/ -llibcryptod
 
